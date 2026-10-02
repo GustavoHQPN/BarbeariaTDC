@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Trem do Corte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="1.png">
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar-wrapper">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.svg" alt="Trem do Corte Logo" class="logo-img">
+                <span>TREM DO CORTE</span>
+            </a>
+
+            <!-- Botão Hambúrguer (Visível apenas em mobile) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="closeMenu()">Início</a></li>
+                    <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
+                    <li><a href="#about" onclick="closeMenu()">Sobre Nós</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
+                    <li><button class="btn btn-schedule" onclick="closeMenu(); openModal();">Agendar Horário</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER HERO -->
+    <section id="home" class="banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="subtitle">ESTILO & TRADIÇÃO EM SABARÁ</span>
+            <h1>BARBEARIA TREM DO CORTE</h1> 
+            <p>Aqui o seu estilo ganha um novo significado. Experiência premium, ambiente acolhedor e profissionais qualificados.</p> 
+            <div class="banner-buttons">
+                <button class="btn btn-primary" onclick="openModal()"><i class="fa-solid fa-calendar-check"></i> Agendar Agora</button>
+                <a href="#services" class="btn btn-outline"><i class="fa-solid fa-scissors"></i> Ver Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="cards">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-scissors"></i></div>
+                    <h3>Corte Masculino</h3>
+                    <p class="price">R$ 35,00</p>
+                    <p>Corte moderno ou clássico com lavagem e acabamento na navalha impecável.</p>
+                    <button class="btn-card" onclick="openModal('Corte Masculino')">Agendar este</button>
+                </div>
+                <div class="service-card highlight">
+                    <div class="badge">Mais Pedido</div>
+                    <div class="service-icon"><i class="fa-solid fa-user-ninja"></i></div>
+                    <h3>Combo Cabelo + Barba</h3>
+                    <p class="price">R$ 60,00</p>
+                    <p>O pacote completo: corte de cabelo + barba desenhada com toalha quente e massagem facial.</p>
+                    <button class="btn-card" onclick="openModal('Combo Cabelo + Barba')">Agendar este</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-spray-can"></i></div>
+                    <h3>Platinado & Nevou</h3>
+                    <p class="price">A partir de R$ 90,00</p>
+                    <p>Descoloração profissional mantendo a saúde dos fios e um visual marcante.</p>
+                    <button class="btn-card" onclick="openModal('Platinado & Nevou')">Agendar este</button>
+                </div>
+            </div>    
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about" class="about">
+        <div class="container about-wrapper">
+            <div class="about-image">
+                <img src="banner.jpg" alt="Interior da Barbearia Trem do Corte">
+            </div>
+            <div class="about-content">
+                <h2>Tradição & Excelência</h2>
+                <div class="divider align-left"></div>
+                <p>Há mais de 10 anos no <strong>Bairro Alvorada em Sabará/MG</strong>, a Barbearia Trem do Corte é referência em estilo e bom atendimento.</p>
+                <p>Oferecemos cortes modernos e barboterapia completa em um ambiente descontraído. O nosso compromisso é fazer com que saia do nosso espaço com a autoestima renovada.</p>
+                
+                <div class="info-boxes">
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Terça a Sábado: 08:00 às 18:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Rua Saraiva, Nº 77 - Alvorada, Sabará/MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fale Connosco</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-grid">
+                <a href="https://wa.me/5531995629030" target="_blank" class="contact-card zap-card">
+                    <img src="zap.jpg" alt="WhatsApp">
+                    <h3>WhatsApp Directo</h3>
+                    <p>(31) 99562-9030</p>
+                    <span>Clique para conversar</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="contact-card insta-card">
+                    <img src="insta.png" alt="Instagram">
+                    <h3>Siga o nosso Instagram</h3>
+                    <p>@tremdocorte</p>
+                    <span>Ver fotos e novidades</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column brand-col">
+                
+                <h3>Trem do Corte</h3>
+                <p>O melhor ambiente e corte da região de Sabará.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Endereço</h4>
+                <p><i class="fa-solid fa-map-pin"></i> Rua Saraiva, Nº 77</p>
+                <p>Alvorada - Sabará/MG</p>
+            </div>
+            <div class="footer-column">
+                <h4>Atendimento</h4>
+                <p><i class="fa-solid fa-phone"></i> (31) 99562-9030</p>
+                <p><i class="fa-solid fa-envelope"></i> atendimento@tremdocorte.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Trem do Corte. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE AGENDAMENTO VIA WHATSAPP -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                <h2>Agendar Corte de Cabelo</h2>
+                <p>Preencha os dados e confirme pelo WhatsApp</p>
+            </div>
+            <form id="bookingForm" onsubmit="sendWhatsAppMessage(event)">
+                <div class="form-group">
+                    <label for="clientName">Seu Nome *</label>
+                    <input type="text" id="clientName" placeholder="Ex: Carlos Silva" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Serviço Desejado *</label>
+                    <select id="serviceType" required>
+                        <option value="Corte Masculino">Corte Masculino (R$ 35)</option>
+                        <option value="Combo Cabelo + Barba">Combo Cabelo + Barba (R$ 60)</option>
+                        <option value="Platinado & Nevou">Platinado & Nevou (R$ 90+)</option>
+                        <option value="Barboterapia / Desenhar Barba">Barboterapia (R$ 30)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">Data *</label>
+                        <input type="date" id="bookingDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingTime">Horário *</label>
+                        <input type="time" id="bookingTime" min="08:00" max="18:00" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="clientNotes">Mensagem Adicional / Observação</label>
+                    <textarea id="clientNotes" rows="3" placeholder="Ex: Gostaria de alinhar a barba também..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">
+                    <i class="fa-brands fa-whatsapp"></i> Confirmar no WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT JS -->
+    <script>
+        function openModal(serviceName = '') {
+            const modal = document.getElementById('bookingModal');
+            modal.style.display = 'flex';
+            
+            if (serviceName) {
+                const select = document.getElementById('serviceType');
+                for (let option of select.options) {
+                    if (option.value.includes(serviceName)) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+            }
+
+            // Define data mínima como hoje
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('bookingDate').setAttribute('min', today);
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        function sendWhatsAppMessage(e) {
+            e.preventDefault();
+
+            const phone = "5531995629030";
+            const name = document.getElementById('clientName').value;
+            const service = document.getElementById('serviceType').value;
+            const dateInput = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const notes = document.getElementById('clientNotes').value;
+
+            // Formatação da data (AAAA-MM-DD para DD/MM/AAAA)
+            const dateArray = dateInput.split('-');
+            const formattedDate = `${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`;
+
+            // Mensagem Pré-programada
+            let message = `*Olá! Gostaria de agendar um horário na Barbearia Trem do Corte!*%0A%0A`;
+            message += `👤 *Nome:* ${encodeURIComponent(name)}%0A`;
+            message += `✂️ *Serviço:* ${encodeURIComponent(service)}%0A`;
+            message += `📅 *Data:* ${formattedDate}%0A`;
+            message += `⏰ *Horário:* ${time}%0A`;
+
+            if (notes.trim() !== '') {
+                message += `📝 *Observação:* ${encodeURIComponent(notes)}`;
+            }
+
+            const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+        }
+                // Abrir / Fechar Menu Hambúrguer no Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Alterna o ícone entre 'barras' e 'X' (fechar)
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Fechar o menu automaticamente ao clicar em qualquer opção
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
+  <defs>
+    <!-- Estilos de Fontes e Efeitos -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Oswald:wght@700&amp;display=swap');
+      
+      .slogan { font-family: 'Great Vibes', cursive; font-size: 28px; fill: #ffffff; text-anchor: middle; }
+      .brand-text { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 42px; fill: #ffffff; stroke: #000000; stroke-width: 2px; text-anchor: middle; letter-spacing: 2px; }
+      .train-body { fill: #D35400; stroke: #111111; stroke-width: 4; }
+      .train-dark { fill: #111111; }
+      .tool-color { fill: #2C3E50; stroke: #ffffff; stroke-width: 1.5; }
+    </style>
+
+    <!-- Caminhos de Curva para os Textos Arqueados -->
+    <path id="arcTop" d="M 50,170 A 210,120 0 0,1 450,170" />
+    <path id="arcBottom" d="M 60,470 A 210,120 0 0,0 440,470" />
+  </defs>
+
+  <!-- BACKGROUND ESCURO PARA DESTAQUE -->
+  <rect width="100%" height="100%" fill="#121212" rx="15"/>
+
+  <!-- 1. SLOGAN (Jesus é o dono do lugar) -->
+  <text x="250" y="45" class="slogan">Jesus é o dono do lugar.</text>
+
+  <!-- 2. FERRAMENTAS DE BARBEIRO (Atrás do Trem) -->
+  <g id="tools">
+    <!-- Pente na Esquerda -->
+    <g transform="translate(140, 240) rotate(-35)">
+      <rect x="0" y="0" width="22" height="120" rx="3" fill="#111" stroke="#fff" stroke-width="1"/>
+      <!-- Dentes do Pente -->
+      <line x1="0" y1="15" x2="12" y2="15" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="25" x2="12" y2="25" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="35" x2="12" y2="35" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="45" x2="12" y2="45" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="55" x2="12" y2="55" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="65" x2="12" y2="65" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="75" x2="12" y2="75" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="85" x2="12" y2="85" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="95" x2="12" y2="95" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="105" x2="12" y2="105" stroke="#fff" stroke-width="3"/>
+    </g>
+
+    <!-- Tesoura no Topo Direito -->
+    <g transform="translate(320, 165) rotate(25)">
+      <circle cx="10" cy="10" r="12" fill="none" stroke="#fff" stroke-width="4"/>
+      <circle cx="35" cy="10" r="12" fill="none" stroke="#fff" stroke-width="4"/>
+      <line x1="15" y1="20" x2="40" y2="90" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <line x1="30" y1="20" x2="5" y2="90" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Navalha no Topo Esquerdo -->
+    <g transform="translate(140, 165) rotate(-25)">
+      <rect x="0" y="0" width="12" height="70" rx="4" fill="#333" stroke="#fff" stroke-width="1.5"/>
+      <path d="M 6,55 Q 25,20 15,0" fill="none" stroke="#E74C3C" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- 3. ESTRUTURA DA LOCOMOTIVA CENTRAL -->
+  <g id="locomotive">
+    <!-- Teto / Chaminé da Locomotiva -->
+    <polygon points="170,200 330,200 310,220 190,220" class="train-dark" stroke="#fff" stroke-width="2"/>
+    
+    <!-- Corpo Principal (Laranja Ferrugem) -->
+    <polygon points="190,220 310,220 330,360 170,360" class="train-body"/>
+    
+    <!-- Janelas de Ventilação Verticais -->
+    <rect x="210" y="240" width="12" height="60" class="train-dark" rx="3"/>
+    <rect x="232" y="235" width="12" height="65" class="train-dark" rx="3"/>
+    <rect x="256" y="235" width="12" height="65" class="train-dark" rx="3"/>
+    <rect x="278" y="240" width="12" height="60" class="train-dark" rx="3"/>
+
+    <!-- Caldeira/Frente Arco -->
+    <path d="M 170,360 Q 250,290 330,360 Z" class="train-body"/>
+    <path d="M 190,360 Q 250,310 310,360 Z" class="train-dark"/>
+
+    <!-- Faróis Frontais da Locomotiva -->
+    <circle cx="215" cy="340" r="7" fill="#F1C40F" stroke="#000" stroke-width="2"/>
+    <circle cx="285" cy="340" r="7" fill="#F1C40F" stroke="#000" stroke-width="2"/>
+
+    <!-- Grade Limpa-Trilhos (Base da Locomotiva) -->
+    <polygon points="160,370 340,370 360,450 140,450" class="train-body"/>
+    
+    <!-- Barras da Grade (Efeito Trilho) -->
+    <line x1="180" y1="370" x2="160" y2="445" stroke="#111" stroke-width="6"/>
+    <line x1="210" y1="370" x2="200" y2="445" stroke="#111" stroke-width="6"/>
+    <line x1="240" y1="370" x2="238" y2="445" stroke="#111" stroke-width="6"/>
+    <line x1="260" y1="370" x2="262" y2="445" stroke="#111" stroke-width="6"/>
+    <line x1="290" y1="370" x2="300" y2="445" stroke="#111" stroke-width="6"/>
+    <line x1="320" y1="370" x2="340" y2="445" stroke="#111" stroke-width="6"/>
+  </g>
+
+  <!-- 4. TEXTO SUPERIOR ARQUEADO (BARBEARIA) -->
+  <text class="brand-text">
+    <textPath href="#arcTop" startOffset="50%">BARBEARIA</textPath>
+  </text>
+
+  <!-- 5. TEXTO INFERIOR ARQUEADO (TREM DO CORTE) -->
+  <text class="brand-text">
+    <textPath href="#arcBottom" startOffset="50%">TREM DO CORTE</textPath>
+  </text>
+</svg>
